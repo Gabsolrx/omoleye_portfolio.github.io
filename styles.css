@@ -1,0 +1,301 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #5052b0;
+    background-image: url(bg_image.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.left-image {
+    margin-left: 600px;
+    width: 150px;
+    float: right;
+}
+
+.left-image img {
+    display: block;
+    width: 400px; 
+    height: auto; 
+}
+
+ 
+
+
+
+/* Header styles */
+header {
+    background:blue;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: left;
+    display: right;
+    align-items: center;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation inside the header */
+.nav-header {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-header li {
+    display: inline;
+}
+
+.nav-header li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-header li a:hover {
+    background: red;
+    border-radius: 5px;
+}
+
+/* Vertical navigation outside the header */
+.vertical-nav {
+    position: fixed;
+    top: 70px; /* Adjust based on header height */
+    left: 0;
+    width: 150px;
+    background: blue;
+    border-right: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.vertical-nav nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-body li {
+    margin-bottom: 10px;
+}
+
+.nav-body li a {
+    color:white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.nav-body li a:hover {
+    background:red;
+    border-radius: 5px;
+}
+
+/* Main content styles */
+main {
+    margin-left: 160px; /* Space for the vertical nav */
+    padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+section {
+    padding: 20px;
+}
+
+p { 
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 15px;
+    justify-content: space-between;
+    justify-items: auto;
+
+
+}
+
+h1, h2, h3{
+    display: flex;
+    margin-top: 0%;
+    margin-bottom: none;
+    padding: none;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color:blue;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background:blue;
+    color: white;
+    position: relative;
+}
+
+
+
+
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.centered-box {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #333;
+    background-color: white;
+    text-align: centre;
+    box-shadow: 0 4px 8px rgba(red, green, blue, alpha);
+    width: 300px;
+    margin-left: 250px;
+    text-shadow: 2px 2px 4px rgba(red, green, blue, alpha);
+    color:red;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 15vh;
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 3px;
+    animation: glow 2s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+@keyframes glow {
+   from {
+    text-shadow: 2px 2px 4px rgba(red, green, blue, alpha), 0 0 10px #ff8a00, 0 0 20px #e52e71;
+          }
+          to {
+            text-shadow: 2px 2px 4px rgba(red, green, blue, alpha), 0 0 20px #ff8a00, 0 0 30px #e52e71;
+          }
+       }
+
+
+ /* Media Queries for responsiveness */
+     @media (max-width: 768px) {
+/* Change layout for smaller screens */
+    .vertical-nav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .nav-header {
+      width: 100%;
+      left: 0;
+    }
+  
+    .content {
+      margin-left: 0;
+      margin-top: 120px;
+    }
+  
+    .right-image {
+      width: 100%;
+      float: none;
+    }
+  }
+  
+      @media (max-width: 480px) {
+    /* Further layout adjustments for very small screens */
+    .horizontal-nav ul {
+      flex-direction: column;
+    }
+  
+    .horizontal-nav li {
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Media Query for small phone screens (360px x 740px) */
+   @media (max-width: 360px) and (max-height: 740px) {
+    main {
+      flex-direction: row; /* Arrange h1 and p elements side by side */
+      justify-content: space-between; /* Spread out content horizontally */
+      align-items: center; /* Vertically center content */
+    }
+  
+    h1, p {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        
+    }
+  
+    h1 {
+      text-align: left; /* Align the h1 text on the left side */
+    }
+  
+    p {
+      text-align: right; /* Align the p text on the right side */
+    }
+  }
+  
+  /* Ensure that on very small screens (like 320px wide), the content still fits */
+  @media (max-width: 320px) {
+    main {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center;
+    }
+  
+    h1, p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+       
+
+
+
